@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Hachi+Maru+Pop&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <title>Title Goes Here</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+        }
+
+        /* Change the background to whatever you want */
+        body {
+            background-image: url('starsrbowbg.gif');
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: white;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {   
+            font-family: 'Hachi Maru Pop', cursive;
+            font-size: 60px;
+        }
+
+        h2 {
+            font-family: 'Fredericka the Great', cursive;
+            font-size: 40px;
+            padding: 10px;
+        }
+
+        h3 {
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        /* Navigation */
+
+        nav {
+            background: white;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            /* Change into different icons for the nav list, just change the url */
+            list-style: square inside url('star47.gif')
+        }
+
+        nav ul li {
+            padding: 5px;
+        }
+
+        nav button {
+            border: none;
+            outline: none;
+            transition: 0.3s;
+            padding: 15px;
+            background-color: #fee97c;
+        }
+
+        nav button:hover {
+            background-color: #c3b3ec;
+        }
+
+        nav button:active {
+            background-color: #f4b1cd;
+        }
+
+        /* Top Properties */
+        .top {
+            background-color: white;
+            /* can change divider img to something else */
+            background-image: url('shootingstars.gif');
+            background-repeat: repeat-x;
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Main */
+
+        .tabcontent {
+            background-color: white;
+            border: solid 5px #fee97c;
+            margin: auto;
+            max-width: 800px;
+            padding: 40px;
+            position: relative;
+        }
+
+        #home, #about, #threetab, #fourtab, #fivetab {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+        .stickerOne {
+            position: absolute;
+            z-index: 1;
+            left: 15%;
+            top: 0;
+            max-width: 300px;
+        }
+
+        .stickerOne img{
+            width: 100%;
+            height: auto;
+        }
+
+        .stickerTwo {
+            position: relative;
+            left: 45%;
+            max-width: 150px;
+        }
+
+        .stickerTwo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .creditText {
+            visibility: hidden;
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            font-size: 10px;
+        }
+
+        .credit:hover .creditText {
+            visibility: visible;
+        }
+
+        /* Media Queries */
+
+        @media only screen and (max-width: 1500px) {
+            .stickerOne {
+                max-width: 200px;
+            }
+        }
+        @media only screen and (max-width: 1000px) {
+            .stickerOne {
+                position: relative;
+                left: 0;
+            }
+            .top {
+                min-height: 100px;
+            }
+
+            nav button {
+                padding: 5px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="stickerOne">
+            <!-- Change the img to whatever you want -->
+            <img src="transparentrb.png" alt="Rainbow Bright">
+        </div>
+        <div class="top">
+            <!-- your name or title goes here -->
+            <h1>Name Here</h1>
+        </div>
+        <nav>
+            <ul>
+                <!-- customise each of the button link titles, ex: home, about, link, link, link -->
+                <li><button class="tablinks" onclick="openTabs(event, 'one')" id="defaultOpen">home</button></li>
+                <li><button class="tablinks" onclick="openTabs(event, 'two')" id="defaultOpen">about</button></li>
+                <li><button class="tablinks" onclick="openTabs(event, 'three')" id="defaultOpen">Link</button></li>
+                <li><button class="tablinks" onclick="openTabs(event, 'four')" id="defaultOpen">Link</button></li>
+                <li><button class="tablinks" onclick="openTabs(event, 'five')" id="defaultOpen">Link</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="one" class="tabcontent" style="display:none;">
+            <section id="home">
+                <!-- Customise Text here for First Tab -->
+                <h2>Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h3>Sub-subtitle</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+        </section>
+
+        <section id="two" class="tabcontent" style="display:none;">
+            <section id="about">
+                <!-- Customise Text here for Second Tab -->
+                <h2>Subtitle 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+        </section>
+
+        <section id="three" class="tabcontent" style="display:none;">
+            <section id="threetab">
+                <!-- Customise Text here for Third Tab -->
+                <h2>Title 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+        </section>
+
+        <section id="four" class="tabcontent" style="display:none;">
+            <section id="fourtab">
+                <!-- Customise Text here for Fourth Tab -->
+                <h2>Title 4</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+        </section>
+
+        <section id="five" class="tabcontent" style="display:none;">
+            <section id="fivetab">
+                <!-- Customise Text here for Fifth Tab -->
+                <h2>Title 5</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="stickerTwo">
+            <!-- Customise the second img -->
+            <img src="starlight.png">
+        </div>
+        <div class="credit">
+            <a href="https://skull-aton.neocities.org" target="_blank"><img src="star47.gif" alt="star for credit"></a>
+            <span class="creditText">coded in undeath by Skell</span>
+        </div>
+    </footer>
+    
+    <script>
+        function openTabs(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+        }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+      }
+    document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>
