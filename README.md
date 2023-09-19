@@ -13,7 +13,6 @@ There's JS that lets you go through each tab to input different 'pages.'
 ## Assets
 All assets used are not mine.
 Tiled background I got from [sadgrl online](https://sadgrl.online/)
-Rainbow Bright is owned by Hallmark and Mattell.
 
 ## Contact
 find me at [my website](https://skull-aton.com)
